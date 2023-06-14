@@ -1,0 +1,78 @@
+<body class="body">
+  
+
+
+<div class="container">
+
+  <div class="upper-data">
+
+
+  <img src="../assets/Cold.jpg" *ngIf="14>15">
+  <img src="../assets/Hot.jpeg" *ngIf="14 <15">
+  
+
+  <div class="weather-data">
+    <div class="location">Delhi</div>
+    <div class="temperature">{{14.40 | number: '1.0-0'}}°C </div>
+  </div>
+
+
+  </div>
+
+
+  <div class="lowerdata">
+
+    <div class="more-info-lable">More Information</div>
+    <div class="more-info-container">
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/Mini.jpg" >
+          <span>Min</span>
+        </div>
+        <div class="info-block-value">
+          10°
+        </div>
+      </div>
+
+
+
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/Max.jpg" >
+          <span>Max</span>
+        </div>
+        <div class="info-block-value">
+          40°
+        </div>
+      </div>
+
+
+
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/Humidity.jpg" >
+          <span>Humidity</span>
+        </div>
+        <div class="info-block-value">
+          77%
+        </div>
+      </div>
+
+
+
+      <div class="info-block">
+        <div class="info-block-lable">
+          <img src="../assets/wind3.jpg" >
+          <span>Wind</span>
+        </div>
+        <div class="info-block-value">
+          11 km/hr
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+</body>
