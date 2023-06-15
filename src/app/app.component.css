@@ -25,6 +25,7 @@
     justify-content: center;
     align-items: center;
 
+
 }
 
 .container{
@@ -33,6 +34,8 @@
     background-color: blue;
     border-radius: 20px;
     box-shadow: 10px 10px 10x 10px var(--shadow-dark);
+    
+    
 }
 
 .upper-data{
@@ -138,3 +141,25 @@
     font-size: 15px;
     font-weight: 800;
 }
+.serach{
+    margin-bottom: 1em;
+    text-align: center;
+    justify-content: center;
+    
+}
+
+.serach input{
+
+    background-color: lightblue;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    padding: 1em;
+    color: black;
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.search-container form {
+    display: flex;
+  }

@@ -1,19 +1,23 @@
-<body class="body">
-  
+ <body class="body">
+   
 
-
-<div class="container">
+<div class="serach">
+  <form #form ="ngForm" (submit)="onSubmit()">
+    <input type="text" placeholder="Search City" name="city"[(ngModel)]="cityName">
+  </form>
+</div>
+<div class="container" *ngIf="weatherData">
 
   <div class="upper-data">
 
 
-  <img src="../assets/Cold.jpg" *ngIf="14>15">
-  <img src="../assets/Hot.jpeg" *ngIf="14 <15">
+  <img src="../assets/Cold.jpg" *ngIf="weatherData.main.temp <=59">
+  <img src="../assets/Hot.jpeg" *ngIf="weatherData.main.temp >59">
   
 
   <div class="weather-data">
-    <div class="location">Delhi</div>
-    <div class="temperature">{{14.40 | number: '1.0-0'}}°C </div>
+    <div class="location">{{weatherData.name}}</div>
+    <div class="temperature">{{weatherData.main.temp | number: '1.0-0'}}°F </div>
   </div>
 
 
@@ -30,7 +34,7 @@
           <span>Min</span>
         </div>
         <div class="info-block-value">
-          10°
+          {{weatherData.main.temp_min | number: '1.0-0'}}°F 
         </div>
       </div>
 
@@ -42,7 +46,7 @@
           <span>Max</span>
         </div>
         <div class="info-block-value">
-          40°
+          {{weatherData.main.temp_max | number: '1.0-0'}}°F 
         </div>
       </div>
 
@@ -54,7 +58,7 @@
           <span>Humidity</span>
         </div>
         <div class="info-block-value">
-          77%
+          {{weatherData.main.humidity}}
         </div>
       </div>
 
@@ -63,10 +67,10 @@
       <div class="info-block">
         <div class="info-block-lable">
           <img src="../assets/wind3.jpg" >
-          <span>Wind</span>
+          <span>Pressure</span>
         </div>
         <div class="info-block-value">
-          11 km/hr
+          {{weatherData.main.pressure}}
         </div>
       </div>
     </div>
@@ -75,4 +79,87 @@
   </div>
 </div>
 
-</body>
+ </body> 
+
+ <!-- <body class="body">
+  
+<div class="serach">
+  <form>
+    <input type="text" placeholder="Search City">
+  </form>
+</div>
+
+  <div class="container" >
+  
+    <div class="upper-data">
+  
+  
+    <img src="../assets/Cold.jpg" *ngIf="14>15">
+    <img src="../assets/Hot.jpeg" *ngIf="14 <15">
+    
+  
+    <div class="weather-data">
+      <div class="location">Delhi</div>
+      <div class="temperature">{{14.40 | number: '1.0-0'}}°C </div>
+    </div>
+  
+  
+    </div>
+  
+  
+    <div class="lowerdata">
+  
+      <div class="more-info-lable">More Information</div>
+      <div class="more-info-container">
+        <div class="info-block">
+          <div class="info-block-lable">
+            <img src="../assets/Mini.jpg" >
+            <span>Min</span>
+          </div>
+          <div class="info-block-value">
+            10°
+          </div>
+        </div>
+  
+  
+  
+        <div class="info-block">
+          <div class="info-block-lable">
+            <img src="../assets/Max.jpg" >
+            <span>Max</span>
+          </div>
+          <div class="info-block-value">
+            40°
+          </div>
+        </div>
+  
+  
+  
+        <div class="info-block">
+          <div class="info-block-lable">
+            <img src="../assets/Humidity.jpg" >
+            <span>Humidity</span>
+          </div>
+          <div class="info-block-value">
+            77%
+          </div>
+        </div>
+  
+  
+  
+        <div class="info-block">
+          <div class="info-block-lable">
+            <img src="../assets/wind3.jpg" >
+            <span>Wind</span>
+          </div>
+          <div class="info-block-value">
+            11 km/hr
+          </div>
+        </div>
+      </div>
+  
+      
+    </div>
+  </div>
+  
+  </body> -->
